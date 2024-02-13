@@ -26,6 +26,7 @@ def arithmentic_operators(operator: str , n1: float, n2: float) -> float:
     module = n1 % n2
     exponentiation = n1 ** n2
     
+    # Utilizo operadores de comparacion
     if operator == '+':
         return sum
     elif operator == '-':
@@ -44,3 +45,17 @@ def arithmentic_operators(operator: str , n1: float, n2: float) -> float:
         return 'Error: The operator not exist'
     
 print(arithmentic_operators('%', 13, 2))
+
+def arithmentic_operators2(operator: str , n1 : float, n2: float ) -> float:
+    operators_dict = {
+        "+": n1 + n2,
+        "-": n1 - n2,
+        "*": n1 * n2,
+        "/": n1 / n2,
+        "//": n1 // n2,
+        "%": n1 % n2,
+        "**": n1 ** n2,
+    } 
+    return operators_dict.get(operator, 'Error')
+
+print(arithmentic_operators2('//', 99, 5))
