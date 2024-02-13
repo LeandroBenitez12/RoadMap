@@ -38,6 +38,9 @@ PI = 3.14
 # Int
 my_int = 10
 
+# Bool
+my_bool = True
+
 # Float
 my_float = 4.5
 
