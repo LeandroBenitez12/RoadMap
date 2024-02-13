@@ -78,3 +78,13 @@ print(operator_comparison('!=', 4, 5))
 print(f'AND 14 >= 18 and 19 >= 18: {17 >= 18 and 22 >= 18}')
 print(f'OR 14 >= 18 and 19 >= 18: {14 >= 18 or 19 >= 18}')
 print(f'NOT 18 >= 18: {not 18 == 18}')
+
+# Assigment Operators
+my_num = 18 # '=' asignacion 
+print(my_num)
+my_num -= 1 #substract and assigment
+print(my_num)
+my_num *= 2 #multiply and assigment
+print(my_num)
+my_num /= my_num #substract and assigment
+print(my_num)
