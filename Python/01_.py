@@ -88,3 +88,11 @@ my_num *= 2 #multiply and assigment
 print(my_num)
 my_num /= my_num #substract and assigment
 print(my_num)
+
+# Identity Operators 
+my_new_num= 1.0
+
+print(f' My_num es == a my_new_numb {my_num is my_new_num}') # no tienen la misma posicion en memoria , es lo que compara
+
+my_new_num = my_num 
+print(f' My_num es == a my_new_numb {my_num is my_new_num}')
