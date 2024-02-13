@@ -26,13 +26,21 @@ def arithmentic_operators(operator: str , n1: float, n2: float) -> float:
     module = n1 % n2
     exponentiation = n1 ** n2
     
-    list_operators = [
-        sum,subtraction,multiplication,split,split_int,module,exponentiation
-    ]
-    for index in list_operators:
-        # print(str(index))         
-        if str(operator) == str(index):
-            return index 
-    return 'Error'
+    if operator == '+':
+        return sum
+    elif operator == '-':
+        return subtraction 
+    elif operator == '*':
+        return multiplication 
+    elif operator == '/':
+        return split 
+    elif operator == '//':
+        return split_int 
+    elif operator == '%':
+        return module 
+    elif operator == '**':
+        return exponentiation 
+    else:
+        return 'Error: The operator not exist'
     
-print(arithmentic_operators('sum', 2, 2))
+print(arithmentic_operators('%', 13, 2))
