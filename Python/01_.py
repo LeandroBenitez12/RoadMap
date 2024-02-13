@@ -96,3 +96,6 @@ print(f' My_num es == a my_new_numb {my_num is my_new_num}') # no tienen la mism
 
 my_new_num = my_num 
 print(f' My_num es == a my_new_numb {my_num is my_new_num}')
+
+# operadores de pertenencia 
+print(f'O in Leandro: {'o' in 'Leandro'}')
