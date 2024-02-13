@@ -26,7 +26,7 @@ def arithmentic_operators(operator: str , n1: float, n2: float) -> float:
     module = n1 % n2
     exponentiation = n1 ** n2
     
-    # Utilizo operadores de comparacion
+    # Utilizo operadores de comparacion, y estructuras de control condicionales
     if operator == '+':
         return sum
     elif operator == '-':
@@ -59,3 +59,22 @@ def arithmentic_operators2(operator: str , n1 : float, n2: float ) -> float:
     return operators_dict.get(operator, 'Error')
 
 print(arithmentic_operators2('//', 99, 5))
+
+#Operators comparison , return = > True / False
+
+def operator_comparison(operator, n1,n2) -> bool:
+    operators= {
+        "==": n1 == n2,
+        "!=": n1 != n2,
+        ">=": n1 >= n2,
+        "<=": n1 <= n2,
+        "<": n1 < n2,
+        ">": n1 > n2,
+    }
+    return operators.get(operator, 'Error')
+print(operator_comparison('!=', 4, 5))
+
+# logical operators
+print(f'AND 14 >= 18 and 19 >= 18: {17 >= 18 and 22 >= 18}')
+print(f'OR 14 >= 18 and 19 >= 18: {14 >= 18 or 19 >= 18}')
+print(f'NOT 18 >= 18: {not 18 == 18}')
