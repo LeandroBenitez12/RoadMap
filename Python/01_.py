@@ -99,3 +99,24 @@ print(f' My_num es == a my_new_numb {my_num is my_new_num}')
 
 # operadores de pertenencia 
 print(f'O in Leandro: {'o' in 'Leandro'}')
+print(f'F in Leandro: {'F' not in 'Leandro'}')
+
+# operadores DE BIT 
+A = 10 # 1010
+B= 2 # 0010
+print(f'AND A & B = {A & B}')
+print(f'OR A = {A | B}')
+print(f'XOR A = {A ^ B}')
+print(f'NOT ~A = {~A}')
+
+# iterativas
+# for 
+for i in range(1, 11):
+    print(i)
+
+n = 1
+
+#bucle while
+while n <= 9:
+    print(n)
+    n +=1
