@@ -122,11 +122,15 @@ while n <= 9:
     n +=1
 
 try: 
-    name = str(input("Write you name  ")).lower()
-    print(f'Your name is: {name}')
+    #name = str(input("Write you name  ")).lower()
+    #print(f'Your name is: {name}')
     print(f' 10/0= {10/0}')
 except Exception as e:
     print(f'Ocurred an Exception: {e}')
 finally: 
     print('Finished managegment Exception')
     
+
+for n in range(10,56):
+    if n % 2 == 0 and n != 16 and n % 3 != 0:
+        print(f'es par , distinto a 16 y no es multiplo de 3:  {n}')
