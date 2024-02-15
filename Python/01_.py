@@ -120,3 +120,13 @@ n = 1
 while n <= 9:
     print(n)
     n +=1
+
+try: 
+    name = str(input("Write you name  ")).lower()
+    print(f'Your name is: {name}')
+    print(f' 10/0= {10/0}')
+except Exception as e:
+    print(f'Ocurred an Exception: {e}')
+finally: 
+    print('Finished managegment Exception')
+    
