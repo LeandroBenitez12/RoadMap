@@ -112,7 +112,7 @@ print(my_tuple)
 
 # SETS CONJUNTOS
 
-# Sets / Conjuntos , no repeated elements 
+# Sets / Conjuntos , no repeated elements , are messy and mutables
 my_set =  {'Leandro', 'Alejandro', 'leandro', 'Leandro'}
 print(my_set) # returns set without  repeated elements
 
