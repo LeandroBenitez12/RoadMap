@@ -76,14 +76,21 @@ print(f'First element: {my_list_guests[0]}') # access to the element first
 print(f'Indice de Rayana: {my_list_guests.index("Rayana")}')
 
 ### TUPLES ###
-
+# this are inmutables, but you can do some operations 
 # Tuples are immutable
-my_tuple = ("German", "-", "Pablo", "+", "-", "+", "Rodrigo", "-", "+")
-print(f'Cantidad de - en : {my_tuple.count("-")}') # can be counted
 
-# get
-print(my_tuple[2]) # access
+my_tuple = ("German", "German", "Pablo", "Leandro", "German", "Leandro", "Rodrigo", "German", "Agustin")
+print(f'Cantidad de "Leandro" en my_tuple: {my_tuple.count("Leandro")}') # can be counted
 
+# the get are similars in the lists
+print(my_tuple[-2]) # access
+print(my_tuple[0:3])
+
+print(len(my_tuple))# contar elementos totales
+
+my_tuple = my_tuple*3 # multiplicar elementos
+print(my_tuple)
+print(len(my_tuple))
 # Updates
 #Slice assignment: Puedes usar la asignación de slices para actualizar varios elementos a la vez en la lista.
 my_list_guests[-2:]= ["Miguel", "Agnel"]
