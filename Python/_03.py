@@ -120,3 +120,10 @@ print(my_set) # returns set without  repeated elements
 my_set.add('Leo') # Insert a new element
 print(my_set)
 
+### DICT ###
+# Are elements key-value ,unique key , are mutables 'CRUD', are messy(Supposedly)
+my_dict = {
+    "Key": "Value",
+    "user": "Leandro",
+    "age" : 20,
+}
