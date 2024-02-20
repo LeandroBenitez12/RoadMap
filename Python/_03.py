@@ -75,6 +75,17 @@ print(f'First element: {my_list_guests[0]}') # access to the element first
 # Obtenemos el indice del elemento
 print(f'Indice de Rayana: {my_list_guests.index("Rayana")}')
 
+# Updates
+#Slice assignment: Puedes usar la asignación de slices para actualizar varios elementos a la vez en la lista.
+my_list_guests[-2:]= ["Miguel", "Agnel"]
+print(my_list_guests)
+
+#filter
+numbers = [0,1,2,3,4,5,6,7,8,9,33,22,11,93]
+
+numbers_multiple_3 = list(filter(lambda x : x % 3 == 0 and x != 0, numbers))
+
+print(numbers_multiple_3)
 ### TUPLES ###
 # this are inmutables, but you can do some operations 
 # Tuples are immutable
@@ -91,14 +102,15 @@ print(len(my_tuple))# contar elementos totales
 my_tuple = my_tuple*3 # multiplicar elementos
 print(my_tuple)
 print(len(my_tuple))
-# Updates
-#Slice assignment: Puedes usar la asignación de slices para actualizar varios elementos a la vez en la lista.
-my_list_guests[-2:]= ["Miguel", "Agnel"]
-print(my_list_guests)
 
 #order
 my_tuple = tuple(sorted(my_tuple)) # ordering, el sorted las pasa a listas entonces hay que pasarlas a tuplas nuevamente
 print(my_tuple)
+
+#FILTER 
+#my_tuple = filter()
+
+# SETS CONJUNTOS
 
 # Sets / Conjuntos , no repeated elements 
 my_set =  {'Leandro', 'Alejandro', 'leandro', 'Leandro'}
