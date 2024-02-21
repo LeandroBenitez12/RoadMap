@@ -147,3 +147,58 @@ print(my_dict.pop("Countrie")) # elimina introduciendo el key y retorna que se e
 
 my_dict.popitem() #elimina ultimo key-value agregada
 print(my_dict)
+
+
+def contact_book():
+    #agenda de contactos
+    options_menu = ["Search","Insert","Update","Delete"]
+    contacts_db = {}
+    print("-------MENU-------")
+    for index ,option in enumerate(options_menu):
+        print(f'Option {index + 1}: Contact {option}')
+    
+    # Bloque try-except por error en caso de ingresar mal el input y no sea un int por ejemplo
+    try:
+        option_select =  int(input("Enter option in number: "))
+    except Exception as e:
+        return print("Error : {e}") 
+    # Condicionales
+    # OPERATION GET
+    if option_select == 1:
+        print("------Search-------")
+        try:
+            key_to_search = str(input("Enter key for search it: "))
+        except Exception as e :
+            return print("Error : {e}") 
+        if key_to_search in contacts_db:
+            return print(f'The key is {key_to_search} and his value is {contacts_db[key_to_search]}')
+        return print("The key not exist")
+    # OPERATION UPDATE
+    if option_select == 2:
+        print("------INSERT-------")
+        try:
+            key_to_insert = str(input("Enter key for insert : "))
+            value_to_insert = input("Enter value for insert : ")
+        except Exception as e :
+            return print("Error : {e}") 
+        if key_to_insert in contacts_db:
+            return print("Key was create")
+        contacts_db.update({key_to_insert:value_to_insert})
+        return print(f'contact was create succesfully: {contacts_db}')
+    # OPERATION UPDATE
+    if option_select == 3:
+        print("------Update-------")
+        try:
+            key_to_Update = str(input("Enter key for Update it: "))
+        except Exception as e :
+            return print("Error : {e}") 
+        if key_to_Update in contacts_db:
+            try:
+                value_update = str(input(f"Enter value for Update key {key_to_Update}: "))
+            except Exception as e :
+                return print("Error : {e}") 
+            contacts_db[key_to_Update] = value_update
+            return print(f'db updated: {contacts_db}')
+        return print("The key not exist")
+    
+contact_book()
