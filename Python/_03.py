@@ -127,3 +127,23 @@ my_dict = {
     "user": "Leandro",
     "age" : 20,
 }
+
+# GET
+print(f'age: {my_dict["age"]}')
+
+# update
+my_dict["user"] = "Leandro06"
+print(my_dict)
+
+my_dict.update({'city': 'Buenos Aires', 'Countrie':'Argentina'}) # Creo nuevos key si no estan
+
+my_dict.update({'city':'Corrientes'}) #si estan los actualizo con funcion update
+
+my_dict.update({"test":'answer'})
+# DELETE
+del my_dict["Key"] # SOLO ELIMINA 
+
+print(my_dict.pop("Countrie")) # elimina introduciendo el key y retorna que se elimino
+
+my_dict.popitem() #elimina ultimo key-value agregada
+print(my_dict)
