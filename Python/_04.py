@@ -87,3 +87,17 @@ def isPalidrome(word_1: str) -> bool:
 
 
 print(isPalidrome('oso'))
+
+#  Los isogramas son palabras o frases en las que cada letra aparece el mismo número de veces.
+
+
+def isIsogram(word: str) -> bool:
+    word = word.lower()
+    substract = 0
+    for index, letter in enumerate(word):
+        numbers_letters = word.count(letter)
+        if numbers_letters != word.count(word[0]):
+            return False   
+    return True
+        
+print(isIsogram('Mmuurrcciillaaggoo'))
