@@ -114,3 +114,15 @@ def listWordsIsograms(words: list) -> list:
 
 
 print(listWordsIsograms(words))
+
+# Los anagramas son palabras o frases que se forman al cambiar el orden de las letras de otra palabra o frase
+def isAnagram(word_1:str, word_2:str) -> bool:
+    word_1 = word_1.lower()
+    word_2 = word_2.lower()
+    if len(word_1) != len(word_2):
+        return False
+    for letter1 in word_1:
+        print(letter1)
+        
+        
+isAnagram('Roma', 'Amor')
