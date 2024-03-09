@@ -93,11 +93,20 @@ print(isPalidrome('oso'))
 
 def isIsogram(word: str) -> bool:
     word = word.lower()
-    substract = 0
-    for index, letter in enumerate(word):
+    for letter in word:
         numbers_letters = word.count(letter)
         if numbers_letters != word.count(word[0]):
             return False   
     return True
+       
+words = ["murcielago", "perro", "oso", "programacion", "python", "ahorcado", "casa", "isla", "muralla", "computadora"]
+
+def listWordsIsograms(words : list) -> list: 
+    listWords = []
+    for word in words:
+        if isIsogram(str(word)):
+            listWords.append(word)
+    return listWords
+            
         
-print(isIsogram('Mmuurrcciillaaggoo'))
+print(listWordsIsograms(words))
