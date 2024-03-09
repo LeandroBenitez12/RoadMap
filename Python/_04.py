@@ -64,3 +64,22 @@ nombre = "Juan"
 edad = 25
 saludo = "Hola, mi nombre es {} y tengo {} años.".format(nombre, edad)
 print(saludo)
+
+# Los palíndromos son palabras o frases que se leen igual de izquierda a derecha que de derecha a izquierda
+def isPalidrome(word_1: str) -> bool:
+    word_1 = word_1.lower()
+    list_word_1 = []
+    for letra in word_1:
+        print(letra)
+        list_word_1.append(letra)
+    print(list_word_1)
+    list_word_1.reverse()
+    print(list_word_1)
+    word_1_reversed = ''
+    word_1_reversed = word_1_reversed.join(list_word_1)
+    print(word_1_reversed)
+    if word_1 == word_1_reversed:
+        return True
+    return False
+print(isPalidrome('oso'))
+        
