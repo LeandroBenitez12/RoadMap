@@ -93,20 +93,24 @@ print(isPalidrome('oso'))
 
 def isIsogram(word: str) -> bool:
     word = word.lower()
+    # cada palabra la paso a minuscula , y luego la paso por un for donde cada letra del str le cuento sus repeticiones en el str con count, estos numeros de repeticiones que tiene cada letra la comparo con las repeticiones de mi primera letra x default y si existe una distincion retorno un false = no es isogramo, si lo es, dejo que termino el for y return un true
     for letter in word:
         numbers_letters = word.count(letter)
         if numbers_letters != word.count(word[0]):
-            return False   
+            return False
     return True
-       
-words = ["murcielago", "perro", "oso", "programacion", "python", "ahorcado", "casa", "isla", "muralla", "computadora"]
 
-def listWordsIsograms(words : list) -> list: 
+
+words = ["murcielago", "perro", "oso", "programacion", "python",
+         "ahorcado", "casa", "isla", "muralla", "computadora"]
+
+# funcion donde recibo listas de palabras para comprobar si son o no isogramas y retorno lista, con las isogramas nomas
+def listWordsIsograms(words: list) -> list:
     listWords = []
     for word in words:
         if isIsogram(str(word)):
             listWords.append(word)
     return listWords
-            
-        
+
+
 print(listWordsIsograms(words))
