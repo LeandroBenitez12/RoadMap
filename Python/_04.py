@@ -144,6 +144,40 @@ def isAnagram(word1: str, word2: str) -> bool:
         return False
     if CompareAmountLettersTwoWords(word1, word2) == False:
         return False
-    
+    return True
+
 
 print(isAnagram('roma', 'roma'))
+
+"""
+ * DIFICULTAD EXTRA (opcional):
+ * Crea un programa que analice dos palabras diferentes y realice comprobaciones
+ * para descubrir si son:
+ * - Palíndromos
+ * - Anagramas
+ * - Isogramas
+ 
+"""
+
+
+def analizerTwoWords(word1: str, word2: str):
+    word1 = word1.lower()
+    word2 = word2.lower()
+    # palíndromos
+    print(f'¿{word1} y {word2} son Palindromos? {word1 == word2[::-1]}')  # Maldito Brais
+    #anagramas
+    print(f'¿{word1} y {word2} son Anagramas? {sorted(word1) == sorted(word2)}') 
+    # isograma
+    # set() me devuelve un set de las letras que contiene la palabra sin repetir letras, y desordenadas
+    # con el len() puedo pedir la cantidad de letra de la palabra o elementos del set si la palabra tiene 1 letra repetida la borrara en el set y sera menos la longitud por lo que no sera un heterograma
+    # print(set(word1))
+    # heterograma
+    print(f'¿{word1} es un heterograma? {len(word1) == len(set(word1))}')
+    print(f'¿{word2} es un heterograma? {len(word2) == len(set(word2))}')
+    # isograma
+    print(f'¿{word1} es un Isograma? {isIsogram(word1)}')
+    print(f'¿{word2} es un Isograma? {isIsogram(word2)}')
+    
+my_name = 'Leandro'
+print(my_name[:3:-1])  # good
+analizerTwoWords('RAMONRAMON', 'ROMAN')
