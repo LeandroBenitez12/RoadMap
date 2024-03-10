@@ -105,6 +105,8 @@ words = ["murcielago", "perro", "oso", "programacion", "python",
          "ahorcado", "casa", "isla", "muralla", "computadora"]
 
 # funcion donde recibo listas de palabras para comprobar si son o no isogramas y retorno lista, con las isogramas nomas
+
+
 def listWordsIsograms(words: list) -> list:
     listWords = []
     for word in words:
@@ -115,14 +117,33 @@ def listWordsIsograms(words: list) -> list:
 
 print(listWordsIsograms(words))
 
+
+def CompareAmountLettersTwoWords(word1, word2):
+    word1 = word1.lower()
+    word2 = word2.lower()
+    list_letter_word1 = []
+    list_letter_word2 = []
+    for letter_word1 in word1:
+        list_letter_word1.append(letter_word1)
+    for letter_word2 in word2:
+        list_letter_word2.append(letter_word2)
+
+    list_letter_word1.sort()
+    list_letter_word2.sort()
+
+    if list_letter_word1 == list_letter_word2:
+        return True
+    return False
 # Los anagramas son palabras o frases que se forman al cambiar el orden de las letras de otra palabra o frase
-def isAnagram(word_1:str, word_2:str) -> bool:
-    word_1 = word_1.lower()
-    word_2 = word_2.lower()
-    if len(word_1) != len(word_2):
+
+
+def isAnagram(word1: str, word2: str) -> bool:
+    word1 = word1.lower()
+    word2 = word2.lower()
+    if len(word1) != len(word2):
         return False
-    for letter1 in word_1:
-        print(letter1)
-        
-        
-isAnagram('Roma', 'Amor')
+    if CompareAmountLettersTwoWords(word1, word2) == False:
+        return False
+    
+
+print(isAnagram('roma', 'roma'))
