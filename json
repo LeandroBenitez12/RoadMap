@@ -1,0 +1,24 @@
+{
+    "productos" : [
+        {
+        "id": 0,
+        "descripcion": "Botines",
+        "colores_disponibles": [
+            "rojo",
+            "negro"
+        ],
+        "stock": true,
+        "precio": 2000.45
+        },
+        {
+            "id": 0,
+            "descripcion": "Botines",
+            "colores_disponibles": [
+                "rojo",
+                "negro"
+            ],
+            "stock": true,
+            "precio": 2000.45
+            },
+    ]
+}

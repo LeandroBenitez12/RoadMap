@@ -1,0 +1,12 @@
+<products>
+    <product>
+        <id>1</id>
+        <description>Gol Power</description>
+        <Colors>
+            <Color>Blue</Color>
+            <Color>Red</Color>
+        </Colors>
+        <Stock>true</Stock>
+        <Price>5000.57</Price>
+    <product>    
+</products>
